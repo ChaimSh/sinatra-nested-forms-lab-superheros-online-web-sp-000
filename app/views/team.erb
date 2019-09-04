@@ -7,15 +7,15 @@ Team Motto: <%=@heroes[:motto]%>
 
 <h2>Heroes</h2>
 <p>
-  <%@heroes[:hero].each do |hero|%>
+  <%@heroes[:hero].each.with_index do |hero, index|%>
   Hero Name:
-  <%=hero[:name]%>
+  <%=hero[:name][index]%>
   <br>
   Hero Power:
-  <%=hero[:power]%>
+  <%=hero[:power][index]%>
   <br>
   Hero Biography:
-  <%=hero[:bio]%>
+  <%=hero[:bio][index]%>
   <br>
   <%end%>
 
